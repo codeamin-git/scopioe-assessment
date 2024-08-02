@@ -3,7 +3,8 @@ import Register from "../../Register/Register/Register";
 const Home = () => {
     return (
         <div>
-            <Register />
+            <h1 className="text-3xl text-center">this is home</h1>
+            {/* <Register /> */}
         </div>
     );
 };

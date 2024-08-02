@@ -2,14 +2,33 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import RegisterText from "../RegisterText/RegisterText";
+import useAuth from "../../../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const RegisterFrom = () => {
+  const {createUser} = useAuth()
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate()
 
     const { handleSubmit, register, formState: { errors } } = useForm();
-  const onSubmit = values => console.log(values);
+
+    const onSubmit = (data) => {
+      const { email, password } = data
+      createUser(email, password)
+          .then(result => {
+              console.log(result.user);
+              const newUser = result.user
+              if(newUser){
+                navigate('/')
+                toast.success('Signed In Successfully!')
+              }
+          })
+          .catch(error => {
+              console.error(error)
+          })
+  }
 
     return (
         <div className="w-full">

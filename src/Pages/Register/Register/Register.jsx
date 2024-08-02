@@ -2,7 +2,7 @@ import AuthBanner from "../../../components/shared/AuthBanner/AuthBanner";
 import RegisterFrom from "../RegisterForm/RegisterFrom";
 
 const Register = () => {
-
+    
     return (
         <div className="flex flex-col lg:flex-row w-full lg:p-24 lg:gap-28 bg-[url('https://i.ibb.co/B2KX559/banner-2.jpg')] bg-center bg-cover md:bg-none min-h-screen">
             

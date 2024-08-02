@@ -3,13 +3,25 @@ import {
   } from "react-router-dom";
 import Home from "../Pages/Home/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
+import Register from "../Pages/Register/Register/Register";
+import Main from "../../layouts/Main";
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-    errorElement: <ErrorPage />
+    element: <Main />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/',
+        element: <PrivateRoute><Home /></PrivateRoute>
+      },
+      {
+        path: '/register',
+        element: <Register />
+      }
+
+    ]
   },
 ]);
-
-export default router;
