@@ -5,12 +5,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
+import RegisterSlide from '../RegisterSlide/RegisterSlide';
 
 const AuthBanner = () => {
     return (
         <div>
-            
-            <div className=''>
             <Swiper 
             slidesPerView={1}
             spaceBetween={30}
@@ -20,12 +19,10 @@ const AuthBanner = () => {
             }}
             modules={[Pagination]}
             >
-        <SwiperSlide>Slide 1</SwiperSlide>
+                {/* register slide from shared component */}
+        <SwiperSlide><RegisterSlide /></SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
       </Swiper>
-            </div>
-
         </div>
     );
 };

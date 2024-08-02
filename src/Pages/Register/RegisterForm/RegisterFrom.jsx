@@ -14,7 +14,9 @@ const RegisterFrom = () => {
     return (
         <div className="w-full">
           {/* register heading */}
+          <div className="hidden md:block">
           <RegisterText />
+          </div>
           {/* register form fields */}
             <div className="rounded-t-3xl bg-white p-4">
               <h2 className="md:hidden text-center text-3xl font-semibold my-6 ">Sign In</h2>
