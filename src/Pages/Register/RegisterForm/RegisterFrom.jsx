@@ -10,7 +10,8 @@ import toast from "react-hot-toast";
 const RegisterFrom = () => {
   const {createUser} = useAuth()
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const from = '/';
 
     const { handleSubmit, register, formState: { errors } } = useForm();
 
@@ -21,7 +22,7 @@ const RegisterFrom = () => {
               console.log(result.user);
               const newUser = result.user
               if(newUser){
-                navigate('/')
+                navigate(from)
                 toast.success('Signed In Successfully!')
               }
           })

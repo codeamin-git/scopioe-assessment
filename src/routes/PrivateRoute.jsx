@@ -8,7 +8,7 @@ const PrivateRoute = ({children}) => {
         return <Loader />
     }
     if(!user){
-        return <Navigate to='/register' state={location.pathname} replace='true'></Navigate>
+        return <Navigate to='/register'></Navigate>
     }
     return (
         <div>
