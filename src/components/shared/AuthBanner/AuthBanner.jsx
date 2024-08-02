@@ -8,9 +8,9 @@ import { Pagination } from 'swiper/modules';
 
 const AuthBanner = () => {
     return (
-        <div style={{backgroundImage: "url('https://i.ibb.co/0sbGCyp/banner-1.jpg')"}} className="bg-cover h-screen">
+        <div>
             
-            <div className='h-full'>
+            <div className=''>
             <Swiper 
             slidesPerView={1}
             spaceBetween={30}
