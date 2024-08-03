@@ -23,7 +23,7 @@ const RegisterFrom = () => {
               const newUser = result.user
               if(newUser){
                 navigate(from)
-                toast.success('Signed In Successfully!')
+                toast.success('Signed Up Successfully!')
               }
           })
           .catch(error => {

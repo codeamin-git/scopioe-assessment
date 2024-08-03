@@ -9,28 +9,54 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 
 const LoginForm = () => {
-    const {createUser} = useAuth()
+    const {signInUser, googleLogin, facebookLogin, setLoading} = useAuth()
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const from = '/';
 
   const { handleSubmit, register, formState: { errors } } = useForm();
 
+//   email login
   const onSubmit = (data) => {
     const { email, password } = data
-    createUser(email, password)
+    signInUser(email, password)
         .then(result => {
-            console.log(result.user);
+            // console.log(result.user);
             const newUser = result.user
             if(newUser){
               navigate(from)
-              toast.success('Signed In Successfully!')
+              toast.success('Logged In Successfully!')
             }
         })
         .catch(error => {
             console.error(error)
         })
 }
+
+    // handle google sign in
+  const handleGoogleLogin = async () => {
+    try{
+      await googleLogin()
+      navigate('/')
+      toast.success('Logged In Successfully!')
+      setLoading(false)
+    }catch(err){
+      console.log(err);
+    }
+  }
+
+  // handle google sign in
+  const handleFacebookLogin = async () => {
+    try{
+      await facebookLogin()
+      navigate('/')
+      toast.success('Logged In Successfully!')
+      setLoading(false)
+    }catch(err){
+      console.log(err);
+    }
+  }
+
     return (
         <div className="w-full">
           {/* register heading */}
@@ -41,15 +67,15 @@ const LoginForm = () => {
             <div className="rounded-t-3xl bg-white p-4">
               <div className="md:hidden my-6">
               <h2 className="text-center text-3xl font-semibold mb-2 ">Log In To Your Account</h2>
-              <p className="leading-7 text-[#5C635A] text-sm">Welcome Back! Select a method to log in:</p>
+              <p className="leading-7 text-[#5C635A] text-sm text-center">Welcome Back! Select a method to log in:</p>
               </div>
             {/* google & fb button */}
             <div className="flex items-center justify-between">
-                <button className="flex items-center gap-2 px-5 py-2 rounded-lg shadow-lg bg-gradient-to-r from-[#E4E4E4] to-[white]">
+                <button onClick={handleGoogleLogin} className="flex items-center gap-2 px-5 py-2 rounded-lg shadow-lg bg-gradient-to-r from-[#E4E4E4] to-[white]">
                     <FcGoogle /> Google
                 </button>
 
-                <button className="flex items-center gap-2 px-5 py-2 rounded-lg text-white bg-blue-500">
+                <button onClick={handleFacebookLogin} className="flex items-center gap-2 px-5 py-2 rounded-lg text-white bg-blue-500">
                     <FaFacebookF /> Facebook
                 </button>
             </div>

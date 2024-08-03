@@ -1,6 +1,7 @@
 import { useState } from "react";
 import RegisterText from "../../../Pages/Register/RegisterText/RegisterText";
 import RegisterFrom from "../../../Pages/Register/RegisterForm/RegisterFrom";
+import { Link } from "react-router-dom";
 
 const RegisterSlide = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -30,7 +31,8 @@ const RegisterSlide = () => {
                 }
             </div>
             <div className={isVisible ? 'hidden md:block' : 'md:w-96 mx-auto text-center text-xl font-semibold p-8 bg-[#152A16] bg-opacity-10 rounded-lg'}>
-            <button onClick={handleClick} className="text-blue-500 hover:underline">Create Account</button>
+            <Link to='/register' onClick={handleClick} className="text-blue-500 hover:underline hidden md:block">Create Account</Link>
+            <button onClick={handleClick} className="text-blue-500 hover:underline md:hidden">Create Account</button>
             <p className="text-white">Fill in Your Information</p>
         </div>
         </div>
