@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { CiLogin } from "react-icons/ci";
 import { HiBars3BottomRight, HiOutlineBell } from "react-icons/hi2";
 import { TfiClose } from "react-icons/tfi";
-import useAuth from '../../hooks/useAuth';
-import SidebarRoutes from '../shared/SidebarRoutes/SidebarRoutes';
+import useAuth from '../../../hooks/useAuth';
+import SidebarRoutes from '../../../components/shared/SidebarRoutes/SidebarRoutes';
 
 const NavBar = () => {
     const {user, logout} = useAuth()
