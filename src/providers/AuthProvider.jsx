@@ -38,7 +38,7 @@ const AuthProvider = ({ children }) => {
     }
 
     // sign out
-    const logOut = () => {
+    const logout = () => {
         setUser(null)
         signOut(auth)
     }
@@ -62,7 +62,7 @@ const AuthProvider = ({ children }) => {
         loading,
         setLoading,
         signInUser,
-        logOut,
+        logout,
         googleLogin,
         facebookLogin,
     }

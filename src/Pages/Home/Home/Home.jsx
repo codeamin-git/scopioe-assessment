@@ -1,10 +1,9 @@
-import Register from "../../Register/Register/Register";
+import NavBar from "../../../components/NavBar/NavBar";
 
 const Home = () => {
     return (
         <div>
-            <h1 className="text-3xl text-center">this is home</h1>
-            {/* <Register /> */}
+            <NavBar />
         </div>
     );
 };

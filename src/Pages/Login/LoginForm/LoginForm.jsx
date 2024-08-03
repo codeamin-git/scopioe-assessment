@@ -69,16 +69,18 @@ const LoginForm = () => {
               <h2 className="text-center text-3xl font-semibold mb-2 ">Log In To Your Account</h2>
               <p className="leading-7 text-[#5C635A] text-sm text-center">Welcome Back! Select a method to log in:</p>
               </div>
+
             {/* google & fb button */}
             <div className="flex items-center justify-between">
-                <button onClick={handleGoogleLogin} className="flex items-center gap-2 px-5 py-2 rounded-lg shadow-lg bg-gradient-to-r from-[#E4E4E4] to-[white]">
+                <button onClick={handleGoogleLogin} className="flex items-center gap-2 px-12 py-3 rounded-lg shadow-lg bg-gradient-to-r from-[#E4E4E4] to-[white]">
                     <FcGoogle /> Google
                 </button>
 
-                <button onClick={handleFacebookLogin} className="flex items-center gap-2 px-5 py-2 rounded-lg text-white bg-blue-500">
+                <button onClick={handleFacebookLogin} className="flex items-center gap-2 px-12 py-3 rounded-lg text-white bg-blue-500">
                     <FaFacebookF /> Facebook
                 </button>
             </div>
+            {/* divider */}
             <div className="flex items-center my-6">
             <div className="flex-grow border-t border-gray-300"></div>
             <span className="mx-4 text-sm text-[#5C635A]">Or Continue with Email</span>
