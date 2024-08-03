@@ -90,7 +90,7 @@ const RegisterFrom = () => {
               {/* submit btn */}
               <div className="w-2/3 mx-auto mt-6 mb-2">
                 <button type="submit" className="bg-blue-500 w-full rounded-lg px-3 py-4 text-white mb-3" >Sign up</button>
-                <p>Already Have an Account? <Link className="text-blue-500 underline">Log in</Link></p>
+                <p>Already Have an Account? <Link to='/login' className="text-blue-500 underline font-medium">Log in</Link></p>
               </div>
             </form>
             </div>

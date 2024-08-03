@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 import RegisterSlide from '../RegisterSlide/RegisterSlide';
+import LoginSlide from '../LoginSlide/LoginSlide';
 
 const AuthBanner = () => {
     return (
@@ -21,7 +22,7 @@ const AuthBanner = () => {
             >
                 {/* register slide from shared component */}
         <SwiperSlide><RegisterSlide /></SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide><LoginSlide /></SwiperSlide>
       </Swiper>
         </div>
     );
