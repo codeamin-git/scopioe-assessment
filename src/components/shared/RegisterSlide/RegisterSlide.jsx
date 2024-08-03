@@ -31,7 +31,9 @@ const RegisterSlide = () => {
                 }
             </div>
             <div className={isVisible ? 'hidden md:block' : 'md:w-96 mx-auto text-center text-xl font-semibold p-8 bg-[#152A16] bg-opacity-10 rounded-lg'}>
+              {/* button for large device */}
             <Link to='/register' onClick={handleClick} className="text-blue-500 hover:underline hidden md:block">Create Account</Link>
+            {/* button for small device */}
             <button onClick={handleClick} className="text-blue-500 hover:underline md:hidden">Create Account</button>
             <p className="text-white">Fill in Your Information</p>
         </div>
