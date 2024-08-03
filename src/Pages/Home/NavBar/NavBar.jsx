@@ -52,7 +52,7 @@ const NavBar = () => {
         </button>
       </div>
       {isSidebarOpen && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 md:hidden">
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 z-50 md:hidden">
           <div className="absolute right-0 top-0 w-2/3 bg-white text-black">
             <button
               onClick={toggleSidebar}
