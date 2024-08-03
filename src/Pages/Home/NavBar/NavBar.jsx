@@ -7,7 +7,6 @@ import SidebarRoutes from '../../../components/shared/SidebarRoutes/SidebarRoute
 
 const NavBar = () => {
     const {user, logout} = useAuth()
-    console.log(user);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleLogout = () => {
@@ -18,7 +17,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-4">
+    <nav className="flex items-center justify-between p-4  border-b-2">
         {/* nav start */}
       <div>
         {/* logo */}
